@@ -1,0 +1,143 @@
+:root {
+  --main-color: #872341;
+  --text-color: #fff;
+  --hover-color: #d3d3d3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--main-color);
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__left,
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar__icon {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navbar__center {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__item {
+  user-select: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navbar__logout {
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.navbar__icon:hover,
+.navbar__item:hover,
+.navbar__logout:hover {
+  color: var(--hover-color);
+}
+
+.navbar__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.navbar__item:focus-visible,
+.navbar__icon:focus-visible,
+.navbar__logout:focus-visible {
+  outline: 2px solid var(--hover-color);
+  outline-offset: 2px;
+}
+
+.navbar__hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .navbar__hamburger {
+    display: block;
+  }
+
+  .navbar__center,
+  .navbar__right {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .navbar__center--open,
+  .navbar__right--open {
+    max-height: 500px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--main-color);
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .navbar__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar__center--open {
+    text-align: center;
+    top: 50px;
+  }
+
+  .navbar__right--open {
+    justify-content: center;
+    flex-direction: row;
+    top: 205px;
+  }
+
+  .navbar__item {
+    font-size: 1.2rem;
+  }
+}
