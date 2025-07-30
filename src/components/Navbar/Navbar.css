@@ -122,6 +122,7 @@
 
   .navbar__right--open {
     justify-content: center;
+    text-align: center;
     flex-direction: row;
     top: 205px;
   }

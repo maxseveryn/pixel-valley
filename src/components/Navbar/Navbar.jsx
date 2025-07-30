@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "./Navbar.css";
 import profileUser from "../../assets/default-user.png";
 
-const currentUser = true;
+const currentUser = false;
 
 const luckyLinks = [
   "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -122,8 +122,12 @@ export default function Navbar() {
           </>
         ) : (
           <ul className="navbar__list">
-            <li className="navbar__item">LOGIN</li>
-            <li className="navbar__item">REGISTER</li>
+            <a href="/login">
+              <li className="navbar__item">LOGIN</li>
+            </a>
+            <a href="/register">
+              <li className="navbar__item">REGISTER</li>
+            </a>
           </ul>
         )}
       </div>

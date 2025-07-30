@@ -1,0 +1,89 @@
+.auth-container {
+  position: relative;
+  background-image: url(../../assets/earth-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px) brightness(70%);
+  z-index: 0;
+}
+
+.auth {
+  max-width: 80%;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0, 0.15),
+    rgb(255, 255, 255, 0.15)
+  );
+  border-radius: 12px;
+  backdrop-filter: blur(100px);
+  padding: 30px;
+  border-radius: 12px;
+  height: fit-content;
+  gap: 30px;
+  color: var(--text-color);
+}
+
+.auth h1 {
+  text-align: center;
+}
+
+.auth__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth__inputs form {
+  width: 100%;
+}
+
+.login__submit {
+  font-size: 1.5rem;
+  font-family: "Pixelify Sans", sans-serif;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  height: 50px;
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: transform, background-color 0.3s ease;
+}
+.login__submit:hover {
+  background-color: var(--main-hover-color);
+  transform: scale(1.1);
+}
+
+.login__links {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login__link {
+  cursor: pointer;
+}
+
+.login__link:hover {
+  color: var(--hover-color);
+}

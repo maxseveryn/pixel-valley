@@ -6,8 +6,10 @@
   align-items: center;
   height: 100vh;
   gap: 30px;
-  background-color: var(--gray);
   background-image: url(../../assets/about-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 0 30px;
 }
 
