@@ -9,12 +9,14 @@ import About from "./pages/About/About.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Register from "./pages/Register/Register.jsx";
+import Play from "./pages/Play/Play.jsx";
 
 export function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
+        <Route path="/canvas" element={<Play />} />
         <Route path="/not-found" element={<NotFound />} />
         <Route path="/about" element={<About />} />
         <Route path="/" element={<Homepage />} />

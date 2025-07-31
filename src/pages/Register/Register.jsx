@@ -5,6 +5,7 @@ import PasswordInput from "../../components/PasswordInput/PasswordInput.jsx";
 export default function Register() {
   return (
     <div className="auth-container">
+      <title>PixelValley - Register</title>
       <div className="auth">
         <h1>PixelValley | Register</h1>
         <div className="auth__inputs">

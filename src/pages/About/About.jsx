@@ -12,6 +12,7 @@ export default function About() {
       ></iframe>
 
       <div className="about__description">
+        <title>PixelValley - About</title>
         <h1>About "PixelValley"</h1>
         <div className="about__description-div">
           <p className="description__quote">

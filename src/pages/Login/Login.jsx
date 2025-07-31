@@ -23,6 +23,7 @@ export default function Login() {
 
   return (
     <div className="auth-container">
+      <title>PixelValley - Login</title>
       <div className="auth">
         <h1>PixelValley | Login</h1>
         <div className="auth__inputs">

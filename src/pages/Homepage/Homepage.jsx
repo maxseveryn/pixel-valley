@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import backgroundVideo from "../../assets/background.mp4";
 import mainLogo from "../../assets/logo.png";
 import "./Homepage.css";
@@ -6,6 +7,7 @@ import "./Homepage.css";
 import ChatOverlay from "../../components/ChatOverlay/ChatOverlay.jsx";
 
 export default function Homepage() {
+  const navigate = useNavigate();
   return (
     <div className="home">
       <title>PixelValley - Homepage</title>
@@ -22,8 +24,18 @@ export default function Homepage() {
             pixel to create a dynamic and evolving digital masterpiece!
           </p>
           <div className="landing__buttons">
-            <button className="landing__play-button">Play</button>
-            <button className="landing__about-button">About Us</button>
+            <button
+              onClick={() => navigate("/canvas")}
+              className="landing__play-button"
+            >
+              Play
+            </button>
+            <button
+              onClick={() => navigate("/about")}
+              className="landing__about-button"
+            >
+              About Us
+            </button>
           </div>
         </div>
         <ChatOverlay />

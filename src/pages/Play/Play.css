@@ -1,0 +1,9 @@
+.play-container {
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .play-container {
+    overflow: auto;
+  }
+}
