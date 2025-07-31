@@ -5,18 +5,20 @@
 
   width: 50px;
   height: 50px;
+  border: 2px solid var(--text-color);
   border-radius: 50%;
   background-color: var(--main-color);
   color: var(--text-color);
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .chat__button:hover {
   background-color: var(--main-hover-color);
+  transform: scale(1.05);
 }
 
 .chat__container {
-  display: none;
   position: fixed;
   bottom: 120px;
   right: 10px;
@@ -26,12 +28,22 @@
   background-color: var(--main-color);
   border: 1px solid var(--text-color);
   border-radius: 20px;
-}
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-.chat__container--open {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s;
+}
+
+.chat__container--open {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
 
 .chat__header {

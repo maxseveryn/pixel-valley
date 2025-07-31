@@ -1,7 +1,7 @@
 .pixel {
   width: 1rem;
   height: 1rem;
-  border: 1px solid black;
+  border: 1px solid rgb(190, 189, 189);
 }
 .pixel:hover {
   cursor: pointer;

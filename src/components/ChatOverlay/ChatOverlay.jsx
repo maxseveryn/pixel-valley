@@ -1,18 +1,15 @@
-import { React, useState } from "react";
+import React from "react";
 import "./ChatOverlay.css";
 
-export default function ChatOverlay() {
-  const [chatOpen, setChatOpen] = useState(false);
-  const toggleChat = () => setChatOpen((prev) => !prev);
-
+export default function ChatOverlay({ isOpen, onToggle }) {
   return (
     <div className="chat-overlay">
-      <button className="chat__button" onClick={toggleChat}>
+      <button className="chat__button" onClick={onToggle}>
         <i className="fa-solid fa-comment"></i>
       </button>
 
       <div
-        className={`chat__container ${chatOpen ? "chat__container--open" : ""}`}
+        className={`chat__container ${isOpen ? "chat__container--open" : ""}`}
       >
         <h1 className="chat__header">PixelValley | Chat</h1>
         <hr />

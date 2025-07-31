@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .landing__buttons button {
@@ -49,6 +49,7 @@
   font-family: "Pixelify Sans";
   font-size: 1.8rem;
   border-radius: 15px;
+  border: 2px solid var(--text-color);
   background-color: var(--main-color);
   color: var(--text-color);
   cursor: pointer;
@@ -67,6 +68,7 @@
 .landing__buttons .landing__about-button {
   width: 100px;
   height: 25px;
-  border-radius: 10px;
+  border: none;
+  background-color: transparent;
   font-size: 1rem;
 }
