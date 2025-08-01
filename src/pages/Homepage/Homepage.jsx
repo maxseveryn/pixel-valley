@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import backgroundVideo from "../../assets/background.mp4";
 import mainLogo from "../../assets/logo.png";
@@ -8,6 +8,13 @@ import ChatOverlay from "../../components/ChatOverlay/ChatOverlay.jsx";
 
 export default function Homepage() {
   const navigate = useNavigate();
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpen = (modalName) => {
+    setOpenModal((prev) => (prev === modalName ? null : modalName));
+  };
+
   return (
     <div className="home">
       <title>PixelValley - Homepage</title>
@@ -38,7 +45,10 @@ export default function Homepage() {
             </button>
           </div>
         </div>
-        <ChatOverlay />
+        <ChatOverlay
+          isOpen={openModal === "chat"}
+          onToggle={() => handleOpen("chat")}
+        />
       </div>
     </div>
   );
