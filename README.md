@@ -1,6 +1,6 @@
 # PixelValley
 
-Pixel art canvas where users can place pixels, choose colors, and create digital masterpieces together.
+Pixel art canvas where users can place pixels, choose colors, and create pixel-arts together.
 Features include a color picker, leaderboard, chat.
 
 # How to run:
